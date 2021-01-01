@@ -2,18 +2,18 @@ import { Component } from 'react';
 
 /* taken from react-native types */
 export interface LayoutRectangle {
-    x: number;
-    y: number;
-    width: number;
-    height: number;
+	x: number;
+	y: number;
+	width: number;
+	height: number;
 }
 
 /* taken from react-native types */
 export interface LayoutChangeEvent {
-    nativeEvent: {
+	nativeEvent: {
 		target: number;
-        layout: LayoutRectangle;
-    };
+		layout: LayoutRectangle;
+	};
 }
 
 export interface BarcodeMaskProps {
@@ -33,9 +33,10 @@ export interface BarcodeMaskProps {
 	lineAnimationDuration?: number;
 	animatedLineOrientation?: string;
 	useNativeDriver?: boolean;
+	image?: string;
 	onLayoutMeasured?: (event: LayoutChangeEvent) => void;
 }
 
-declare class BarcodeMask extends Component<BarcodeMaskProps, {}> {}
+declare class BarcodeMask extends Component<BarcodeMaskProps, {}> { }
 
 export default BarcodeMask;
